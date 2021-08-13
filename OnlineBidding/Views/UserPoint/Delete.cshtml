@@ -1,0 +1,73 @@
+﻿@model OnlineBidding.Model.UserPoint
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserPoint</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfBid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddedPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddedPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeductedPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeductedPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

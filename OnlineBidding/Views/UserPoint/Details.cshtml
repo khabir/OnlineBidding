@@ -1,0 +1,67 @@
+﻿@model OnlineBidding.Model.UserPoint
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserPoint</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfBid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddedPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddedPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeductedPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeductedPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
